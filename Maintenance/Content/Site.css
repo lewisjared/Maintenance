@@ -1,0 +1,87 @@
+﻿/* Move down content because we have a fixed navbar that is 50px tall */
+html, body { height: 100% }
+
+
+.wrapper {
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	padding-top: 50px;
+	margin: 0px auto -70px;
+}
+
+.push { height: 70px; }
+
+.footer {
+	height: 70px;
+	color: #999;
+	text-align: center;
+	background-color: #f9f9f9;
+	border-top: 1px solid #e5e5e5;
+}
+
+/* Hide for mobile, show later */
+
+.sidebar { display: none; }
+
+@media (min-width: 768px) {
+	.sidebar {
+		position: fixed;
+		top: 51px;
+		bottom: 0;
+		left: 0;
+		z-index: 1000;
+		display: block;
+		padding: 20px;
+		overflow-x: hidden;
+		overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+		background-color: #f5f5f5;
+		border-right: 1px solid #eee;
+	}
+}
+
+
+.nav-sidebar {
+	margin-right: -21px; /* 20px padding + 1px border */
+	margin-bottom: 20px;
+	margin-left: -20px;
+}
+
+.nav-sidebar > li > a {
+	padding-right: 20px;
+	padding-left: 20px;
+}
+
+.nav-sidebar > .active > a {
+	color: #fff;
+	background-color: #428bca;
+}
+
+.project-buttons a { min-width: 80px; }
+
+.timer-toggle { min-width: 30px; }
+
+.voffset { margin-top: 2px; }
+
+.voffset-1 { margin-top: 5px; }
+
+.voffset-2 { margin-top: 10px; }
+
+.voffset-3 { margin-top: 15px; }
+
+.voffset-4 { margin-top: 30px; }
+
+.voffset-5 { margin-top: 40px; }
+
+.voffset-6 { margin-top: 60px; }
+
+.voffset-7 { margin-top: 80px; }
+
+.voffset-8 { margin-top: 100px; }
+
+.voffset-9 { margin-top: 150px; }
+
+.col-center {
+	margin: 0 auto;
+	float: none;
+}

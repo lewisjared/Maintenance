@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>@ViewBag.Title</title>
+        <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <meta name="viewport" content="width=device-width" />
+		@Styles.Render("~/Content/bootstrap")
+
+    </head>
+    <body>
+
+		@RenderBody()
+
+
+        <footer class="footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-8">
+						<p>&copy; @DateTime.UtcNow.Year - Wrangle</p>
+					</div>
+				</div>
+			</div>
+            
+        </footer>
+
+       <script src="Scripts/jquery-1.11.0.js"></script>
+		@Scripts.Render("~/bundles/bootstrap")
+        
+		<script>
+			// Scrolls to the selected menu item on the page
+			$(function () {
+				$('a[href*=#]:not([href=#])').click(function () {
+					if ($(this).attr("data-toggle") == "button")
+					{
+						//Check the state of the other buttons in the class
+						var classname = $(this).attr('data-name');
+						$("."+classname).removeClass("active");
+						$(this).button('toggle')
+					}
+	
+					if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+
+						var target = $(this.hash);
+						target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+						if (target.length) {
+							$('html,body').animate({
+								scrollTop: target.offset().top
+							}, 1000);
+							return false;
+						}
+					}
+				});
+
+				$("section.question").each(function () {
+					var group = $(this);
+					var form = group.parents("form").eq(0);
+					var name = group.attr('id')
+					var hidden = $('input[name="' + name + '"]', group);
+
+					$("a.btn", group).each(function () {
+						var button = $(this);
+						button.click(function () {
+							var val = $(this).attr("data-value");
+							hidden.val(val);
+						});
+					});
+				});
+			});
+		</script>
+    </body>
+</html>

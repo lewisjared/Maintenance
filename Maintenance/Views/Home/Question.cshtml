@@ -1,0 +1,32 @@
+﻿@model Maintenance.Models.Question
+
+<section id="@Model.Class" class="section question">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-6">
+				<h1>@Model.Title1</h1>
+				@Model.Desc1      
+			
+			</div>
+
+			<div class="col-lg-6">
+				<h1>@Model.Title2</h1>
+				@Model.Desc2
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-6 text-center">
+				<a href="#@Model.NextItem" class="btn btn-dark btn-lg @Model.Class" data-name="@Model.Class" data-value="A" data-toggle="button">
+				Select
+				</a>
+			</div>
+
+			<div class="col-lg-6 text-center">
+				<a href="#@Model.NextItem" class="btn btn-dark btn-lg @Model.Class" data-name="@Model.Class" data-value="B" data-toggle="button">
+				Select
+				</a>
+			</div>
+		</div>
+	</div>
+	<input type="hidden" name="@Model.Class" value="0" />
+</section>

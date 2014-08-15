@@ -1,0 +1,36 @@
+﻿@model List<Maintenance.Models.Question>
+	
+@{
+    ViewBag.Title = "Maintenance";
+}
+
+
+<header id="top" class="header">
+    <div class="text-vertical-center">
+        <h1>Start Bootstrap</h1>
+        <h3>Free Bootstrap Themes &amp; Templates</h3>
+        <br>
+        <a href="#question1" class="btn btn-dark btn-lg">Find Out More</a>
+    </div>
+</header>
+
+@using( Html.BeginForm("SubmitForm", "Home", FormMethod.Post))
+{
+
+foreach (var q in Model)
+{
+	Html.RenderAction("Question", "Home", new { id = q.QuestionId });
+}
+	
+
+<section id="submit" class="section submit">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-6">
+				Submit your results
+				<button id="submitbutton" class="btn btn-dark btn-lg" >Select</button>
+			</div>
+		</div>
+	</div>
+</section>
+}
