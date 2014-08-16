@@ -82,12 +82,21 @@ hr.small {
     -o-background-size: cover;
 }
 
+form {
+	display: inline;
+	    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
 .question {
     display: table;
     position: relative;
     width: 100%;
     height: 100%;
-    background: no-repeat center center scroll;
+	color: #FFFFFF;
+	background: url(../img/bg.jpg) no-repeat center center scroll;
+	background-color: #232B2B;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -103,5 +112,5 @@ hr.small {
 /* Footer */
 
 footer {
-    padding: 100px 0;
+    padding: 0 0 0 50px;
 }
