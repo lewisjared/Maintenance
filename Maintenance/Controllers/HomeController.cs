@@ -20,6 +20,8 @@ namespace Maintenance.Controllers
 		public ActionResult SubmitForm(Response response)
 		{
 			//Save response to database
+			context.Responses.Add(response);
+			context.SaveChanges();
 
 			return RedirectToAction("ShowResponse", response);
 		}

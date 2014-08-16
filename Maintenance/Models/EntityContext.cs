@@ -14,6 +14,7 @@ namespace Maintenance.Models
 		}
 
 		public DbSet<Question> Questions { get; set; }
+		public DbSet<Response> Responses { get; set; }
 
 
 		protected override void OnModelCreating(DbModelBuilder modelBuilder)
