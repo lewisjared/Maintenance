@@ -1,30 +1,27 @@
 ﻿@model Maintenance.Models.Question
 
-<section id="@Model.Class" class="question">
+<section id="@Model.Class" class="question fullpage">
 	<div class="container ">
-		<div class="row">
-			<div class="col-lg-6">
+		<div class="row voffset-7 text-center">
+			<h1>Quiz</h1>
+			<h3>Select the option that best describes your business</h3>
+		</div>
+		<div class="row voffset-7 questionbox">
+			<div class="col-sm-12 text-center ">
 				<h1>@Model.Title1</h1>
-				@Model.Desc1      
-			
-			</div>
-
-			<div class="col-lg-6">
-				<h1>@Model.Title2</h1>
-				@Model.Desc2
+				@Model.Desc1
+				<p class="voffset-3"><a href="#@Model.NextItem" class="btn btn-dark btn-lg @Model.Class" data-name="@Model.Class" data-value="A" data-toggle="button">
+				Select
+				</a></p>
 			</div>
 		</div>
-		<div class="row">
-			<div class="col-lg-6 text-center">
-				<a href="#@Model.NextItem" class="btn btn-dark btn-lg @Model.Class" data-name="@Model.Class" data-value="A" data-toggle="button">
+		<div class="row voffset-5 questionbox">
+			<div class="col-sm-12 text-center">
+				<h1>@Model.Title2</h1>
+				@Model.Desc2
+				<p class="voffset-3"><a href="#@Model.NextItem" class="btn btn-dark btn-lg @Model.Class" data-name="@Model.Class" data-value="B" data-toggle="button">
 				Select
-				</a>
-			</div>
-
-			<div class="col-lg-6 text-center">
-				<a href="#@Model.NextItem" class="btn btn-dark btn-lg @Model.Class" data-name="@Model.Class" data-value="B" data-toggle="button">
-				Select
-				</a>
+				</a></p>
 			</div>
 		</div>
 	</div>

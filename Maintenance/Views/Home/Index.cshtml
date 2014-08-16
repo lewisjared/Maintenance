@@ -5,14 +5,69 @@
 }
 
 
-<header id="top" class="header">
+<header id="top" class="header fullpage">
     <div class="text-vertical-center">
-        <h1>Start Bootstrap</h1>
+        <h1>What is the future of Maintenance?</h1>
         <h3>Free Bootstrap Themes &amp; Templates</h3>
         <br>
-        <a href="#question1" class="btn btn-dark btn-lg">Find Out More</a>
+        <a href="#intro" class="btn btn-dark btn-lg">Find Out More</a>
     </div>
 </header>
+
+<section id="intro" class="fullpage">
+	<div class="container-fluid">
+			<div id="introbanner" class="introbanner">
+		<div class="text-vertical-center">
+			<h1>Effective Maintenance</h1>
+		</div>
+	</div>
+	</div>
+
+	<div class="container">
+		<div class="row voffset-2">
+			<div class="col-sm-3">
+				State of the Art Management
+			</div>
+			<div class="col-sm-9">
+				Advanced and effective maintenance plays a crucial role in the continuous improvement in a company’s competiveness. The use of disruptive technologies and technology in general has affected the industry significantly, however these technologies only add value when excellent management is in place. As companies assets and plants have grown the integrated technical systems have also grown, these systems are more difficult to control and are more sensitive and vulnerable to diverse consequential effects even if one component fails. These maintenance systems must encompass a wide range of assets and resources and this requires advanced management of these maintenance systems to ensure control of the business as a whole increasing reliability, availability, safety and reducing risk.
+			</div>
+		</div>
+		<div class="row voffset-2">
+			<div class="col-sm-3">
+				Holistic Maintenance
+			</div>
+			<div class="col-sm-9">
+				Integrated programmes and planning processes have led to a holistic philosophy and planning around maintenance procedures. These include reliability centred maintenance, total productive maintenance, total quality maintenance and lean maintenance. The aim of these integrated approaches is to offer a complete plan with regards to business operation and maintenance.
+			</div>
+		</div>
+		<div class="row voffset-2">
+			<div class="col-sm-3">
+				Strategy
+			</div>
+			<div class="col-sm-9">
+				An effective strategy must be chosen for a maintenance plan so that maintenance procedures can be optimised. It must be noted that the strategies will be more effective/appropriate depending on the asset in question, therefore there is no one strategy that is best. The strategies listed below are the most common;
+			</div>
+		</div>
+
+		<p>
+		An effective strategy must be chosen for a maintenance plan so that maintenance procedures can be optimised. It must be noted that the strategies will be more effective/appropriate depending on the asset in question, therefore there is no one strategy that is best. The strategies listed below are the most common;
+		<ul>
+			<li>Run to Failure Maintenance</li>
+			<li>Time based Maintenance</li>
+			<li>Opportunity Maintenance</li>
+			<li>Design out Maintenance</li>
+			<li>Condition Based Maintenance</li>
+		</ul>
+
+		The best plans incorporate all of the strategies playing to their strengths to enable an optimal performance and cost ratio.
+
+		</p>
+
+		<p>
+			Find your future maintenance profile!
+		</p>
+	</div>
+</section>
 
 @using( Html.BeginForm("SubmitForm", "Home", FormMethod.Post))
 {
@@ -28,7 +83,10 @@ foreach (var q in Model)
 		<div class="row">
 			<div class="col-lg-6">
 				Submit your results
-				<button id="submitbutton" class="btn btn-dark btn-lg" >Select</button>
+				<p>
+<button id="submitbutton" class="btn btn-dark btn-lg" >Select</button>
+				</p>
+				
 			</div>
 		</div>
 	</div>
