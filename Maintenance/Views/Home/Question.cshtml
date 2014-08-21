@@ -1,29 +1,42 @@
 ﻿@model Maintenance.Models.Question
 
 <section id="@Model.Class" class="question fullpage">
-	<div class="container ">
-		<div class="row voffset-7 text-center">
-			<h1>Quiz</h1>
-			<h3>Select the option that best describes your business</h3>
-		</div>
-		<div class="row voffset-7 questionbox">
+	<div class="container">
+		<div class="row  questionbox">
 			<div class="col-sm-12 text-center ">
 				<h1>@Model.Title1</h1>
 				@Model.Desc1
-				<p class="voffset-3"><a href="#@Model.NextItem" class="btn btn-dark btn-lg @Model.Class" data-name="@Model.Class" data-value="A" data-toggle="button">
+				<br />
+				@if (@Model.IsButton) {
+				foreach(var q in Model.ButtonText)
+				{
+					<a  class="btn btn-dark btn-lg @Model.Class btn-question"  data-value="@q.Value" href="Home/Modal?id=@Model.QuestionId&response=@q.Value" data-toggle="modal" data-target="#@Model.ModalName">
+						@q.Text
+					</a>
+				}
+			}else{
+				<div class="question-slider">
+					<input class="slider" type="text" data-name="@Model.Class" data-slider-name="@Model.Class" data-slider-min="1" data-slider-max="5" data-slider-step="1" data-slider-value="3" data-slider-handle="square" data-slider-lower="@Model.LowerText" data-slider-upper="@Model.UpperText"/>
+					<br />
+				</div>
+				
+				<a  class="btn btn-dark btn-lg @Model.Class" data-toggle="modal" data-target="#@Model.ModalName" href="Home/Modal?id=@Model.QuestionId&response=3">
 				Select
-				</a></p>
-			</div>
-		</div>
-		<div class="row voffset-5 questionbox">
-			<div class="col-sm-12 text-center">
-				<h1>@Model.Title2</h1>
-				@Model.Desc2
-				<p class="voffset-3"><a href="#@Model.NextItem" class="btn btn-dark btn-lg @Model.Class" data-name="@Model.Class" data-value="B" data-toggle="button">
-				Select
-				</a></p>
+				</a>
+			}
+				
 			</div>
 		</div>
 	</div>
-	<input type="hidden" name="@Model.Class" value="0" />
+
+	<input type="hidden" name="@Model.Class" value="3" />
+
+	<!-- Modal -->
+	<div class="modal fade" id="@Model.ModalName" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-next="#@Model.NextItem">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+			</div>
+		</div>
+	</div>
+	
 </section>

@@ -5,16 +5,49 @@
 }
 
 
-<header id="top" class="header fullpage">
-    <div class="text-vertical-center">
-        <h1>What is the future of Maintenance?</h1>
-        <h3>Free Bootstrap Themes &amp; Templates</h3>
-        <br>
-        <a href="#intro" class="btn btn-dark btn-lg">Find Out More</a>
-    </div>
-</header>
+<section class="title fullpage">
+	<div class="header">
+		<div class="text-vertical-center">
+		
+			<h1>Insights into Maintenance</h1>
+			<h3>Free Bootstrap Themes &amp; Templates</h3>
+			<br>
+			
+		</div>
+	</div>
+	<div class="container">
+		<div class="row calltoaction">
+			<div class="col-sm-4 center-block">
+				<a href="#intro" class="icon">
+				<div>
+					<span class="future"></span>
+					<p>The Future</p>
+				</div>
+				</a>
+			</div>
+			
 
-<section id="intro" class="fullpage">
+			<div class="col-sm-4 center-block">
+				<a href="#intro" class="icon">
+					<div>
+						<span class="test"></span>
+						<p>Take the test</p>
+					</div>
+				</a>
+			</div>
+			<div class="col-sm-4 center-block">
+				<a href="#intro" class="icon">
+					<div class="icon">
+						<span class="us"></span>
+						<p>About Us</p>
+					</div>
+				</a>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section id="intro" >
 	<div class="container-fluid">
 			<div id="introbanner" class="introbanner">
 		<div class="text-vertical-center">
@@ -48,26 +81,26 @@
 				An effective strategy must be chosen for a maintenance plan so that maintenance procedures can be optimised. It must be noted that the strategies will be more effective/appropriate depending on the asset in question, therefore there is no one strategy that is best. The strategies listed below are the most common;
 			</div>
 		</div>
-
 		<p>
-		An effective strategy must be chosen for a maintenance plan so that maintenance procedures can be optimised. It must be noted that the strategies will be more effective/appropriate depending on the asset in question, therefore there is no one strategy that is best. The strategies listed below are the most common;
-		<ul>
-			<li>Run to Failure Maintenance</li>
-			<li>Time based Maintenance</li>
-			<li>Opportunity Maintenance</li>
-			<li>Design out Maintenance</li>
-			<li>Condition Based Maintenance</li>
-		</ul>
-
-		The best plans incorporate all of the strategies playing to their strengths to enable an optimal performance and cost ratio.
-
+			The best plans incorporate all of the strategies playing to their strengths to enable an optimal performance and cost ratio.
 		</p>
+		
 
 		<p>
 			Find your future maintenance profile!
 		</p>
 	</div>
 </section>
+
+<section id="quiz">
+	<div class="container ">
+		<div class="row voffset-5 text-center">
+			<h1>Quiz</h1>
+			<h3>Select the option that best describes your business</h3>
+		</div>
+	</div>
+</section>
+
 
 @using( Html.BeginForm("SubmitForm", "Home", FormMethod.Post))
 {
@@ -82,9 +115,9 @@ foreach (var q in Model)
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-6">
-				Submit your results
+				Submit your results to find out how you stack up against other companies.
 				<p>
-<button id="submitbutton" class="btn btn-dark btn-lg" >Select</button>
+					<button id="submitbutton" class="btn btn-dark btn-lg" >Select</button>
 				</p>
 				
 			</div>

@@ -199,10 +199,16 @@
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\EntityContext.cs" />
+    <Compile Include="Models\ModalResponse.cs" />
+    <Compile Include="Models\Reference.cs" />
     <Compile Include="Models\Response.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\bootstrap-slider.css" />
+    <Content Include="Content\bootstrap-slider.min.css">
+      <DependentUpon>bootstrap-slider.less</DependentUpon>
+    </Content>
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -215,9 +221,16 @@
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Compile Include="Models\Question.cs" />
+    <Content Include="Images\appbar.graph.line.png" />
+    <Content Include="Images\appbar.people.multiple.png" />
+    <Content Include="Images\appbar.question.png" />
+    <Content Include="Images\postits.jpg" />
+    <Content Include="Scripts\bootstrap-slider.js" />
     <Content Include="Scripts\jquery-1.11.0.js" />
     <Content Include="Views\Home\Question.cshtml" />
     <Content Include="Views\Home\ShowResponse.cshtml" />
+    <Content Include="Content\bootstrap-slider.less" />
+    <Content Include="Views\Home\Modal.cshtml" />
     <None Include="_bin_deployableAssemblies\x86\sqlcese40.dll" />
     <None Include="_bin_deployableAssemblies\x86\sqlceqp40.dll" />
     <None Include="_bin_deployableAssemblies\x86\sqlceme40.dll" />
@@ -275,7 +288,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Filters\" />
-    <Folder Include="Images\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

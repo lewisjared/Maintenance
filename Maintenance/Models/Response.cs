@@ -15,5 +15,10 @@ namespace Maintenance.Models
 		public string Question4 { get; set; }
 		public string Question5 { get; set; }
 		public string Question6 { get; set; }
+		public string Question7 { get; set; }
+		public string Question8 { get; set; }
+		public string Question9 { get; set; }
+		public string Question10 { get; set; }
+		public string Question11 { get; set; }
 	}
 }

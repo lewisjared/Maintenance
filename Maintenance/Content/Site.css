@@ -17,7 +17,7 @@ body {
 
 body {
     font-family: 'Lato', sans-serif;
-	font-weight: 700;
+	font-weight: 300;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -29,7 +29,7 @@ h1, h2, h3, h4, h5, h6 {
 
 p, div {
     font-family: 'Lato', sans-serif;
-	font-weight: 700;
+	font-weight: 300;
 }
 
 .text-vertical-center {
@@ -84,16 +84,19 @@ hr.small {
 
 /* Header */
 .header {
-	
-    background: url(../Images/postits.jpg) no-repeat center center scroll;
+	display: table;
+    position: relative;
+	border-bottom: 1px rgb(231, 231, 231) solid;
+	height: 70%;
+	width: 100%;
+    background:  url(../Images/Dirty-Hands3.jpg) no-repeat center scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
 }
 
-	.header h1,
-	.introbanner h1{
+	.header h1{
 		color: #FFF;
 		font-size: 5em;
 		text-shadow: 2px 2px 3px rgba(0,0,0,0.6);	
@@ -116,35 +119,65 @@ form {
 	background-color: #FFF;
 }
 
-#introbanner {
+.introbanner {
 	display: table;
-	margin-top: 30px;
+	color: #432F21;
 	width: 100%;
     height: 100%;
-	background: url(../Images/postits.jpg) no-repeat center center scroll;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	background-size: cover;
-	-o-background-size: cover;
+}
+
+.title {
+	background-color: #F8F8F8;
 }
 
 
 .question {
 	color: #432F21;
+	padding-top:150px;
+	padding-bottom: 100px;
+}
+.question a.btn {
+	margin-top: 50px;
+	margin-bottom: 50px;
 }
 
-#question1, #question3, #question5 {
+#quiz {
+	background-color: #F8F8F8;
+	border-top: 1px rgb(231, 231, 231) solid;
+}
+
+#question1 {
+	background-color: #F8F8F8;
+	border-bottom: 1px rgb(231, 231, 231) solid;
+}
+
+#question3, #question5, #question7, #question9, #question11 {
 	background-color: #F8F8F8;
 	border: 1px rgb(231, 231, 231) solid;
 }
 
-#question2, #question4, #question6 {
+#question2, #question4, #question6, #question8, #question10  {
 	background-color: #FFF;
 }
 
 .questionbox  {
 	border: 1px #432F21 solid;
-	background-color: #CDCAB9;
+	background-color: #EDEDED;
+}
+
+.calltoaction {
+	display: table;
+	position: relative;
+	height: 30%;
+	width: 100%;
+	padding-top:3%;
+}
+
+.feature {
+	display: table;
+	position: relative;
+	height: 70%;
+	width: 100%
 }
 
 /* About */
@@ -160,7 +193,6 @@ form {
 	color: #DFDED4; 
     padding: 50px 0 0 -50px;
 }
-
 
 .voffset { margin-top: 2px; }
 
@@ -222,4 +254,43 @@ form {
 .navbar a:hover {
     color: #fff;
     background: none;
+}
+
+
+.icon div {
+	display: inline-block;
+	text-align: center;
+	margin: 0 auto;
+}
+
+	.icon span {
+		display:block;
+		width:120px;
+		height: 120px;
+		background-color: #FFF;
+		border: 2px #432F21 solid;
+		border-radius:24px;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		background-size: cover;
+		-o-background-size: cover;
+	}
+	.icon p {
+		color: #000;
+	}
+
+.test{
+	background: url(../Images/appbar.question.png) no-repeat left top;
+}
+
+.future{
+	background: url(../Images/appbar.graph.line.png) no-repeat left top;
+}
+
+.us{
+	background: url(../Images/appbar.people.multiple.png) no-repeat left top;
+}
+
+.center-block {
+	text-align: center;
 }

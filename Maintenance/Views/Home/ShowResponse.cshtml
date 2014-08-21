@@ -4,54 +4,55 @@
     ViewBag.Title = "ShowResponse";
 }
 
-<h2>ShowResponse</h2>
+<div class="container voffset-5">
+	<h2>Your ideal maintenance program</h2>
+	<div class="row">
+			<div class="display-label">
+				 @Html.DisplayNameFor(model => model.Question1)
+			</div>
+			<div class="display-field">
+				@Html.DisplayFor(model => model.Question1)
+			</div>
 
-<fieldset>
-    <legend>Response</legend>
+			<div class="display-label">
+				 @Html.DisplayNameFor(model => model.Question2)
+			</div>
+			<div class="display-field">
+				@Html.DisplayFor(model => model.Question2)
+			</div>
 
-    <div class="display-label">
-         @Html.DisplayNameFor(model => model.Question1)
-    </div>
-    <div class="display-field">
-        @Html.DisplayFor(model => model.Question1)
-    </div>
+			<div class="display-label">
+				 @Html.DisplayNameFor(model => model.Question3)
+			</div>
+			<div class="display-field">
+				@Html.DisplayFor(model => model.Question3)
+			</div>
 
-    <div class="display-label">
-         @Html.DisplayNameFor(model => model.Question2)
-    </div>
-    <div class="display-field">
-        @Html.DisplayFor(model => model.Question2)
-    </div>
+			<div class="display-label">
+				 @Html.DisplayNameFor(model => model.Question4)
+			</div>
+			<div class="display-field">
+				@Html.DisplayFor(model => model.Question4)
+			</div>
 
-    <div class="display-label">
-         @Html.DisplayNameFor(model => model.Question3)
-    </div>
-    <div class="display-field">
-        @Html.DisplayFor(model => model.Question3)
-    </div>
+			<div class="display-label">
+				 @Html.DisplayNameFor(model => model.Question5)
+			</div>
+			<div class="display-field">
+				@Html.DisplayFor(model => model.Question5)
+			</div>
 
-    <div class="display-label">
-         @Html.DisplayNameFor(model => model.Question4)
-    </div>
-    <div class="display-field">
-        @Html.DisplayFor(model => model.Question4)
-    </div>
+			<div class="display-label">
+				 @Html.DisplayNameFor(model => model.Question6)
+			</div>
+			<div class="display-field">
+				@Html.DisplayFor(model => model.Question6)
+			</div>
+	</div>
+	<div class="row">
+		This<sup><a href="http://www.google.com" data-toggle="tooltip" data-placement="top" title="Some tooltip text!">This</a></sup>
+	</div>
 
-    <div class="display-label">
-         @Html.DisplayNameFor(model => model.Question5)
-    </div>
-    <div class="display-field">
-        @Html.DisplayFor(model => model.Question5)
-    </div>
 
-    <div class="display-label">
-         @Html.DisplayNameFor(model => model.Question6)
-    </div>
-    <div class="display-field">
-        @Html.DisplayFor(model => model.Question6)
-    </div>
-</fieldset>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id=Model.ResponseId }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+</div>
+

@@ -14,6 +14,7 @@ namespace Maintenance.Models
 		}
 
 		public DbSet<Question> Questions { get; set; }
+		public DbSet<ModalResponse> ModalResponses { get; set; }
 		public DbSet<Response> Responses { get; set; }
 
 

@@ -27,7 +27,7 @@
 				<div class="navbar-collapse collapse">
 					<ul class="nav navbar-nav navbar-right">
 						<li>@Html.ActionLink("Home", "Index", "Home")</li>
-						<li><a href="#question1">About</a></li>
+						<li><a href="#intro">About</a></li>
 						<li><a href="#question1">Quiz</a></li>
 					</ul>
 				</div>
@@ -47,28 +47,21 @@
             
         </footer>
 
-       <script src="Scripts/jquery-1.11.0.js"></script>
+       <script src="~/Scripts/jquery-1.11.0.js"></script>
 		@Scripts.Render("~/bundles/bootstrap")
         
 		<script>
 			// Scrolls to the selected menu item on the page
 			$(function () {
 				$('a[href*=#]:not([href=#])').click(function () {
-					if ($(this).attr("data-toggle") == "button")
-					{
-						//Check the state of the other buttons in the class
-						var classname = $(this).attr('data-name');
-						$("."+classname).removeClass("active");
-						$(this).button('toggle')
-					}
-	
+
 					if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
 
 						var target = $(this.hash);
 						target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
 						if (target.length) {
 							$('html,body').animate({
-								scrollTop: target.offset().top
+								scrollTop: target.offset().top-50
 							}, 1000);
 							return false;
 						}
@@ -78,16 +71,39 @@
 				$("section.question").each(function () {
 					var group = $(this);
 					var form = group.parents("form").eq(0);
-					var name = group.attr('id')
+					var name = group.attr('id');
 					var hidden = $('input[name="' + name + '"]', group);
-
-					$("a.btn", group).each(function () {
+					var buttons = $("a.btn", group);
+					
+					buttons.each(function () {
 						var button = $(this);
 						button.click(function () {
 							var val = $(this).attr("data-value");
+							buttons.removeClass('active');
+							$(this).button('toggle');
 							hidden.val(val);
 						});
 					});
+
+					//Link up the slider
+					var slider = $('.slider', group);
+					slider.on('slideStop', function (e) {
+						var val = e.value;
+						var query = buttons[0].href.replace(/\d+$/, val);
+						buttons[0].href = query;
+						hidden.val(val);
+					});
+				});
+
+				$(".slider").slider();
+				$(".btn-question").button();
+
+				$('.modal').on('hide.bs.modal', function (e) {
+					var target = $(this).attr('data-next');
+					$(this).removeData('bs.modal'); // Clear cache
+					$('html,body').animate({
+						scrollTop: $(target).offset().top-50
+					}, 1000);
 				});
 			});
 		</script>
