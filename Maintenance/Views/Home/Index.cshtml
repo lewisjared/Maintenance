@@ -125,3 +125,47 @@ foreach (var q in Model)
 	</div>
 </section>
 }
+
+@section Scripts {
+	<script>
+		$(function () {
+			$("section.question").each(function () {
+				var group = $(this);
+				var form = group.parents("form").eq(0);
+				var name = group.attr('id');
+				var hidden = $('input[name="' + name + '"]', group);
+				var buttons = $("a.btn", group);
+
+				buttons.each(function () {
+					var button = $(this);
+					button.click(function () {
+						var val = $(this).attr("data-value");
+						buttons.removeClass('active');
+						$(this).button('toggle');
+						hidden.val(val);
+					});
+				});
+
+				//Link up the slider
+				var slider = $('.slider', group);
+				slider.on('slideStop', function (e) {
+					var val = e.value;
+					var query = buttons[0].href.replace(/\d+$/, val);
+					buttons[0].href = query;
+					hidden.val(val.toString());
+				});
+			});
+
+			$(".slider").slider();
+			$(".btn-question").button();
+
+			$('.modal').on('hide.bs.modal', function (e) {
+				var target = $(this).attr('data-next');
+				$(this).removeData('bs.modal'); // Clear cache
+				$('html,body').animate({
+					scrollTop: $(target).offset().top - 50
+				}, 1000);
+			});
+		});
+	</script>
+}
