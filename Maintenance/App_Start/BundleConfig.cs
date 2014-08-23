@@ -26,7 +26,7 @@ namespace Maintenance
 
 			bundles.Add(new ScriptBundle("~/bundles/chart").Include("~/Scripts/Chart.js"));
 
-			BundleTable.EnableOptimizations = true;
+			//BundleTable.EnableOptimizations = true;
 		}
 	}
 }

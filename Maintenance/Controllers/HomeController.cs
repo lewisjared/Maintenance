@@ -10,6 +10,12 @@ namespace Maintenance.Controllers
 	public class HomeController : Controller
 	{
 		EntityContext context = new EntityContext();
+
+		public ActionResult About()
+		{
+			return View();
+		}
+
 		public ActionResult Index()
 		{
 			var questions = context.Questions.ToList();

@@ -117,6 +117,12 @@ form {
 
 #intro {
 	background-color: #FFF;
+	border: 1px rgb(231, 231, 231) solid;
+}
+
+#about-us {
+	background-color: #F8F8F8;
+	border: 1px rgb(231, 231, 231) solid;
 }
 
 .introbanner {
@@ -142,22 +148,21 @@ form {
 }
 
 #quiz {
-	background-color: #F8F8F8;
-	border-top: 1px rgb(231, 231, 231) solid;
+	background-color: #FFF;
 }
 
 #question1 {
-	background-color: #F8F8F8;
+	background-color: #FFF;
 	border-bottom: 1px rgb(231, 231, 231) solid;
 }
 
 #question3, #question5, #question7, #question9, #question11 {
-	background-color: #F8F8F8;
+	background-color: #FFF;
 	border: 1px rgb(231, 231, 231) solid;
 }
 
 #question2, #question4, #question6, #question8, #question10  {
-	background-color: #FFF;
+	background-color: #F8F8F8;
 }
 
 .questionbox  {
