@@ -8,11 +8,8 @@
 <section class="title fullpage">
 	<div class="header">
 		<div class="text-vertical-center">
-		
 			<h1>Insights into Maintenance</h1>
-			<h3>Free Bootstrap Themes &amp; Templates</h3>
-			<br>
-			
+			<h3>Find your strategy</h3>
 		</div>
 	</div>
 	<div class="container">
@@ -133,7 +130,7 @@ foreach (var q in Model)
 				var group = $(this);
 				var form = group.parents("form").eq(0);
 				var name = group.attr('id');
-				var hidden = $('input[name="' + name + '"]', group);
+				var hidden = $('input[name="' + name + '"]');
 				var buttons = $("a.btn", group);
 
 				buttons.each(function () {
@@ -158,6 +155,10 @@ foreach (var q in Model)
 
 			$(".slider").slider();
 			$(".btn-question").button();
+
+			$(".modal").on('show.bs.modal', function(e) {
+				$(".tooltips").tooltip({ placement: 'bottom' });
+			});
 
 			$('.modal').on('hide.bs.modal', function (e) {
 				var target = $(this).attr('data-next');

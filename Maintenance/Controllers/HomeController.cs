@@ -26,6 +26,11 @@ namespace Maintenance.Controllers
 			return RedirectToAction("ShowResponse", response);
 		}
 
+		public ActionResult References()
+		{
+			return View();
+		}
+
 		public ActionResult Modal(int id, int response)
 		{
 			var modal = context.ModalResponses.SingleOrDefault(r => r.Question.QuestionId == id && r.AnswersValue.Contains(response.ToString()));

@@ -227,6 +227,8 @@
     <Content Include="Images\appbar.question.png" />
     <Content Include="Images\Dirty-Hands3.jpg" />
     <Content Include="Images\postits.jpg" />
+    <Content Include="Images\sensor-network.jpg" />
+    <Content Include="Images\strategic-plan.jpg" />
     <Content Include="Scripts\bootstrap-slider.js" />
     <Content Include="Scripts\Chart.js" />
     <Content Include="Scripts\Chart.min.js">
@@ -263,6 +265,7 @@
     <Content Include="Scripts\Chart.min.js.map">
       <DependentUpon>Chart.js</DependentUpon>
     </Content>
+    <Content Include="Views\Home\References.cshtml" />
     <None Include="_bin_deployableAssemblies\x86\sqlcese40.dll" />
     <None Include="_bin_deployableAssemblies\x86\sqlceqp40.dll" />
     <None Include="_bin_deployableAssemblies\x86\sqlceme40.dll" />

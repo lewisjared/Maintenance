@@ -1,5 +1,5 @@
 ﻿@model Maintenance.Models.Question
-
+<input type="hidden" name="@Model.Class" value="3" />
 <section id="@Model.Class" class="question fullpage">
 	<div class="container">
 		<div class="row  questionbox">
@@ -20,7 +20,7 @@
 					<br />
 				</div>
 				
-				<a  class="btn btn-dark btn-lg @Model.Class" data-toggle="modal" data-target="#@Model.ModalName" href="Home/Modal?id=@Model.QuestionId&response=3">
+				<a  class="btn btn-dark btn-lg" data-toggle="modal" data-target="#@Model.ModalName" href="Home/Modal?id=@Model.QuestionId&response=3">
 				Select
 				</a>
 			}
@@ -28,8 +28,6 @@
 			</div>
 		</div>
 	</div>
-
-	<input type="hidden" name="@Model.Class" value="3" />
 
 	<!-- Modal -->
 	<div class="modal fade" id="@Model.ModalName" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-next="#@Model.NextItem">
